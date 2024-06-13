@@ -1,3 +1,20 @@
+import styled from "styled-components";
+
+const FadeOutParagraph = styled.p`
+  line-height: 1.5;
+  max-height: 4.5em; /* Adjust this value to control the visible text area */
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  /* Fallback for browsers that do not support mask-image */
+  background: linear-gradient(to bottom, #fff 60%, rgba(255, 255, 255, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white; /* Ensure text color is white for browsers not supporting the gradient */
+`;
+
+
 const ContentSection = ({
   title,
   contentText,
@@ -32,19 +49,16 @@ const ContentSection = ({
     marginBottom: "10px",
   };
 
-  const paragraphStyle = {
-    lineHeight: "1.5",
-  };
-
   return (
     <div style={containerStyle}>
       <img src={imageSrc} alt="Abstract Art" style={imageStyle} />
       <div style={textStyle}>
-        <h1 style={titleStyle}>{title} </h1>
-        <p style={paragraphStyle}>{contentText}</p>
+        <h1 style={titleStyle}>{title}</h1>
+        <FadeOutParagraph>{contentText}</FadeOutParagraph>
       </div>
     </div>
   );
 };
 
 export default ContentSection;
+

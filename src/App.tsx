@@ -1,17 +1,24 @@
+import "./App.css";
+import ContentSection from "./Content";
+import Header from "./Header";
+import ARTICLES from "./articles";
 
-import './App.css'
-import ContentSection from './Content'
-import Header from './Header'
 
 function App() {
-
   return (
     <>
-
       <Header />
-      <ContentSection title="Test title" contentText="Test Content" imageSrc="/content1.jpeg" />
+      {ARTICLES.map((article) => {
+        return (
+          <ContentSection
+            title={article.title}
+            contentText={article.contentText}
+            imageSrc={article.imageSrc}
+          />
+        );
+      })}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
