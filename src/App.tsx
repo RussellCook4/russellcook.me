@@ -9,7 +9,7 @@ function App() {
     <>
 
       <Header />
-      <ContentSection title="Test title" contentText="Test Content" imageSrc="/russ.jpeg" />
+      <ContentSection title="Test title" contentText="Test Content" imageSrc="/content1.jpeg" />
     </>
   )
 }

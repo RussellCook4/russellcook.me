@@ -28,7 +28,7 @@ const Header = () => {
       <div style={textStyle}>
         <h2>This is my online note bank. Feel free to take a peek.</h2>
         <p>currently a data scientist at spotify</p>
-        <p style={quoteStyle}>smart quote about tings</p>
+        <p style={quoteStyle}>things</p>
       </div>
       <div>
         <img
